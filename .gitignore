@@ -1,0 +1,26 @@
+## auto generated files when executing .tex files
+##
+*.bak
+*.sav
+*.aux
+*.blg
+*.dvi
+*.lof 
+*.log
+
+Thesis/Paper/figures/Temp/
+Thesis/Paper/Abstract/
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.pyc
