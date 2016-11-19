@@ -1,0 +1,47 @@
+% Preliminary pages
+\makepreliminaries
+
+\figurespagetrue
+\tablespagetrue
+
+\title{A Matrix-free numerical bifurcation method applied to sheared annular electroconvection}
+\author{Jamil Antoine Jabbour}
+\submitiondate{August 14, 2015}
+\date{\today}
+%\wordcount{58764 words}
+\titlepage
+%\cleardoublepage
+
+\prefacesection{Abstract}
+%\vspace{-1.5cm}
+We investigate the flow transitions in sheared annular electroconvection using {matrix-free} numerical bifurcation methods. In particular, we study a model that simulates a liquid crystal film in the Smectic~A phase suspended between two annular electrodes, and subjected to an electric potential difference and a shear applied by rotating the inner anode at a constant rate.
+Due to the Smectic A nature of the liquid crystal, the fluid can be considered two-dimensional and is modelled using the 2-D incompressible {Navier-Stokes} equations coupled with an equation for charge continuity. The charge density and the electric potential are coupled using a nonlocal relation given by Maxwell's equations.
+
+%In this thesis, dynamical system approach is used to identify the transition of the flow, by implementing numerical bifurcation methods.
+In this thesis, a {matrix-free} numerical bifurcation method is implemented to identify the transitions of the flow that result due to changes in the main nondimensional control parameter, the Rayleigh number $\mathcal{R}$, which is proportional to the square of the applied voltage. %Upon increasing $\mathcal{R}$, the flow undergoes successive transitions from the axisymmetric base state, to rotating waves, to amplitude vacillating waves. %A pseudo-spectral method has been implemented in MATLAB that numerically integrates perturbations from the base state.Rayleigh number $\mathcal{R}$.
+This method consists of a natural continuation method that computes the axisymmetric and rotating waves state by detecting fixed points of two different discrete-time dynamical systems based on numerical integration, and a linear stability analysis that identifies the local behaviour of the flow.
+%In the numerical bifurcation method, the Jacobian of the nonlinear system is approximated using finite differences. This leads to the use of matrix-free methods to solve the linear system obtained at every Newton iteration as well as the eigenvalue problem.Due to the $SO(2)$ symmetry of the system, a different approach is implemented to compute the rotating wave state. The techniques of implementation are presented and the results are summarized in a bifurcation diagram where the primary and secondary transitions are captured.
+The nature of the rotating waves is used to simplify the computation of their corresponding solutions.
+The primary transition from axisymmetric flow to rotating waves, and the secondary transition from rotating waves to amplitude vacillation are isolated. The results are consistent with previous experimental results and numerical simulations, and are summarized in a numerically computed bifurcation diagram.
+
+\cleardoublepage
+
+\prefacesection{Acknowledgements}
+
+To start with, I would like to express my special thanks of gratitude to my Supervisor Dr.\ Greg Lewis for his time, tremendous support, and guidance. You have been a wonderful supervisor for me. I would like to thank you for encouraging my research and allowing me to be acquainted with so many new and innovative things.
+I would like to express my gratitude to Dr.\ Sean Bohun, Dr. Lennaert van Veen, Dr.\ Pietro-Luciano Buono and Dr.\ Dhavide Aruliah for their useful comments, remarks and engagement through the learning process of this MSC. thesis. I would like to thank Dr.\ Stephen Morris for introducing the electroconvection model, Dr.\ Mary Pugh and Dr.\ Peichun  Tsai for sharing the numerical time solver codes.
+Secondly, I would like to thank my parents and fianc\'ee for their support throughout the entire process, both by keeping me harmonious and encouraging me to focus on my research in any way possible.
+Furthermore, I would like to acknowledge my colleagues and friends for their supportive attitude, encouragement and valuable commentaries and suggestions which provided me the incentive to strive towards my goal. I also thank the Ontario Ministry of Training, Colleges, and Universities for the Ontario Graduate Scholarship which funded me during the first year of my MSC. program.
+Lastly, I would like to be grateful of University of Ontario Institute of Technology for accepting me into their Master’s program, providing me with a place to work in comfort, and for offering me opportunities such as teaching assistantships to support me financially.
+
+
+%\cleardoublepage
+
+\declarationpage
+
+%\cleardoublepage
+
+\contents
+
+\afterpreliminaries
+

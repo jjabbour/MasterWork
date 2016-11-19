@@ -1,0 +1,126 @@
+\documentclass[letterpaper,12pt]{uoit_thesis}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym}
+\usepackage{graphicx, subfigure}
+\newtheorem{theorem}{Theorem}[section]
+\usepackage{epstopdf}
+\usepackage{url}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+%\usepackage{rotating}
+%\usepackage{amsmath,epsf,psfig,epsfig}
+%\usepackage{setspace}
+%\usepackage[small,compact]{titlesec}
+%\usepackage[mediumspace,mediumqspace,Grey,squaren]{SIunits}
+
+%% Define a new 'leo' style for the package that will use a smaller font.
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+%% Now actually use the newly defined style.
+\urlstyle{leo}
+
+%\renewcommand{\label}{\textit{#1}}
+%\usepackage[dvips]{graphicx}
+%\usepackage{caption}
+%\usepackage{subcaption}
+%Comment these out when doing double-spaced submission version!
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{1ex plus 0.5ex}
+
+%\numberwithin{equation}{chapter}
+
+\renewcommand{\baselinestretch}{1.5}
+\newcommand{\ms}{\scriptscriptstyle\rm}
+
+%\doublespace
+\renewcommand{\baselinestretch}{1.5}
+
+
+% Added by Jamil Jabbour
+%differentiation
+\makeatletter
+\providecommand*{\diff}%
+    {\@ifnextchar^{\DIfF}{\DIfF^{}}}
+\def\DIfF^#1{%
+    \mathop{\mathrm{\mathstrut d}}%
+        \nolimits^{#1}\gobblespace}
+\def\gobblespace{%
+    \futurelet\diffarg\opspace}
+\def\opspace{%
+    \let\DiffSpace\!%
+    \ifx\diffarg(%
+        \let\DiffSpace\relax
+    \else
+        \ifx\diffarg[%
+            \let\DiffSpace\relax
+    \else
+        \ifx\diffarg\{%
+            \let\DiffSpace\relax
+        \fi\fi\fi\DiffSpace}
+
+%\providecommand*{\deriv}[3][]{%                   % \deriv[]{u}{x}
+%   \frac{\diff^{#1}#2}{\diff #3^{#1}}}
+\providecommand*{\deriv}[3][]{%                   % \deriv[]{u}{x}
+    \frac{\diff^{#1}}{\diff #3^{#1}}#2}
+\providecommand*{\pderiv}[3][]{%                  % \pderiv[2]{\psi}{x}
+\frac{\partial^{#1}#2}%
+{\partial #3^{#1}}}
+
+
+
+% Added by Trevor
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\tx}[1]{\mathrm{#1}}
+\newcommand{\rcite}[1]{\textcolor{red}\cite{#1}}
+\newcommand{\axr}[1]{*** \textcolor{red} {#1} *** }
+\newcommand{\axb}[1]{*** \textcolor{blue} {#1} *** }
+
+\newcommand{\refb}[1]{(\ref{#1})}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\beqa}{\begin{eqnarray}}
+\newcommand{\eeqa}{\end{eqnarray}}
+\newcommand{\bea}{\begin{array}}
+\newcommand{\eea}{\end{array}}
+
+\newcommand{\been}{\begin{enumerate}}
+\newcommand{\een}{\end{enumerate}}
+\newcommand{\beit}{\begin{itemize}}
+\newcommand{\eeit}{\end{itemize}}
+
+\renewcommand{\O}{\mbox{$\mathbf{O}$}}
+\def\lb{\left(}
+\def\rb{\right)}
+\def\LB{\left[}
+\def\RB{\right]}
+\def\Lb{\left\{}
+\def\Rb{\right\}}
+\def\la{\langle}
+\def\ra{\rangle}
+\def\dl{\partial}
+\def\nb{\nabla}
+\def\vp{\varphi}
+
+
+\begin{document}
+
+\include{Thesis_prelim}
+\pagenumbering{arabic}
+
+\include{chapters/ch_introduction}
+\include{chapters/ch_electroconvection}
+\include{chapters/ch_continuation_method}
+\include{chapters/ch_results}
+\include{chapters/ch_conclusion}
+\include{chapters/symbol_list}
+
+\cleardoublepage
+\bibliographystyle{plain}
+\addcontentsline{toc}{chapter}  {Bibliography}
+\bibliography{./bibliography/sources}
+
+\end{document} 
