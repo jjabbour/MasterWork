@@ -7,7 +7,15 @@
 *.dvi
 *.lof 
 *.log
+*.sty
 
+Thesis/Paper/*.out
+Thesis/Paper/*.pdf
+Thesis/Paper/*.aux
+Thesis/Paper/*.log
+Thesis/Paper/*.lof
+Thesis/Paper/*.toc
+Thesis/Paper/*.bbl
 Thesis/Paper/figures/Temp/*
 Thesis/Paper/Abstract/*
 
