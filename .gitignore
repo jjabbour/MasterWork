@@ -16,8 +16,10 @@ Thesis/Paper/*.log
 Thesis/Paper/*.lof
 Thesis/Paper/*.toc
 Thesis/Paper/*.bbl
+Thesis/Paper/*.lot
 Thesis/Paper/figures/Temp/*
 Thesis/Paper/Abstract/*
+
 
 # Packages #
 ############
