@@ -1,0 +1,37 @@
+\chapter*{Appendix A}
+
+\begin{align}
+&\mathbf{F}(\mathbf{u},w):= \Phi_t(\mathbf{u}(r,\theta)) - \gamma\cdot\mathbf{u}(r,\theta) = 0, \;\;\;\;
+\gamma\cdot\mathbf{u}(r,\theta) = \mathbf{u}(r,\theta-wt)\\
+&\mathbf{G}(\mathbf{u},w):= \pderiv[]{\mathbf{u}_0}{\theta}\cdot(\mathbf{u}-\mathbf{u}_0) = 0.
+\end{align}
+
+Using Taylor expansion about a solution $(\mathbf{u}_{k+1},w_{k+1})$ with
+\begin{equation}\begin{split}
+\mathbf{u}_{k+1} =\mathbf{u}_{k} + \delta{\mathbf{u}_{k}}\\
+w_{k+1} = w_{k} + \delta w_{k}
+\end{split}\end{equation}
+
+\begin{equation}\begin{aligned}
+0 = \mathbf{F}(\mathbf{u}_{k+1},w_{k+1}) = &\;\mathbf{F}(\mathbf{u}_{k},w_{k}) +
+D_\mathbf{u}\mathbf{F}(\mathbf{u}_{k},w_{k})\cdot\delta\mathbf{u}_{k}\cdots\\
+&+ D_w\mathbf{F}(\mathbf{u}_{k},w_{k})\cdot\delta w_{k} + O(\max\{||\delta\mathbf{u}_{k}||^{2},||\delta w_{k}||^2\})\\
+\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}
+0 = \mathbf{G}(\mathbf{u}_{k+1},w_{k+1}) = &\;\mathbf{G}(\mathbf{u}_{k},w_{k}) +
+D_\mathbf{u}\mathbf{G}(\mathbf{u}_{k},w_{k})\cdot\delta\mathbf{u}_{k} \cdots\\
+&+ D_w\mathbf{G}(\mathbf{u}_{k},w_{k})\cdot\delta w_{k} + O(\max\{||\delta\mathbf{u}_{k}||^{2},||\delta w_{k}||^2\})
+\end{aligned}\end{equation}
+where
+\begin{align}
+&\mathbf{F}(\mathbf{u}_{k},w_{k}) = \Phi(\mathbf{u}_k,w_k) - \gamma\cdot\mathbf{u}_{k}\\
+&D_\mathbf{u}\mathbf{F}(\mathbf{u}_{k},w_{k}) = D_\mathbf{u}\Phi(\mathbf{u}_{k},w_{k}) - \gamma\\
+& D_w\mathbf{F}(\mathbf{u}_{k},w_{k}) = \pderiv[]{\mathbf{u}_k}{\theta}\cdot\pderiv[]{\theta}{w} = t\pderiv[]{\mathbf{u}_k}{\theta}\\
+&\mathbf{G}(\mathbf{u}_{k},w_{k}) = \pderiv[]{\mathbf{u}_0}{\theta}\cdot(\mathbf{u}_{k}-\mathbf{u}_0)\\
+&D_\mathbf{u}\mathbf{G}(\mathbf{u}_{k},w_{k}) = \pderiv[]{\mathbf{u}_0}{\theta}\\
+& D_w\mathbf{G}(\mathbf{u}_{k},w_{k}) = 0
+\end{align} 
+
+\section{codes}
+In this appendix, a brief overview is shown about the modules that we have implemented in MATLAB. The code is divided into eight modules. The \texttt{Continuation_fixed_points} is a module that compute the steady state of a dynamical systems. \texttt{Continuation_relative_equilibria},\texttt{mat_file},\text{module_needed},\texttt{Movie},\texttt{Pictures}
+\texttt{Plotting} and \texttt{Simulation}). The \texttt{Contin}
