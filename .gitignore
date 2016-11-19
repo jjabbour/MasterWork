@@ -8,8 +8,8 @@
 *.lof 
 *.log
 
-Thesis/Paper/figures/Temp/
-Thesis/Paper/Abstract/
+Thesis/Paper/figures/Temp/*
+Thesis/Paper/Abstract/*
 
 # Packages #
 ############
