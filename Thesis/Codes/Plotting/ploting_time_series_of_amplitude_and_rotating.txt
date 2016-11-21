@@ -1,0 +1,11 @@
+figure()
+subplot(2,2,1)
+plot(t(st:mn),u1_star_Ra_632(st:mn)), axis([t(st) t(mn) -.12 .12])
+subplot(2,2,2)
+plot(x1_star_Ra_632(st:mn),x2_star_Ra_632(st:mn))
+subplot(2,2,3)
+plot(t(st:mn),u1_star_Ra_640(st:mn)),axis([t(st) t(mn) -.12 .12])
+subplot(2,2,4)
+ plot(x1_star_Ra_640(end-k*(2000):end-(k-1)*2000),x2_star_Ra_640(end-k*(2000):end-(k-1)*2000),...
+        color(k),'LineWidth',2);
+diary off

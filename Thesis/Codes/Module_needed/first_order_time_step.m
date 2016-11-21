@@ -1,0 +1,19 @@
+function [psi2m_new,qm_new,phim_new,wm_new] = first_order_time_step(psi2m_new,...
+    qm_now,qm_new,phim_new,wm_now,wm_new,Jqphi_hat_now,...
+    Jwphi_hat_now,Jpsi2q_hat_now,D,D2,K,riprime,...
+    dt,Tq_vs_psi2,Nc,BCs4dr_phi,wm1,wm3,phim1,phim3,Mi,Ra,Pr,It)
+
+for m=0:1:K % Loop for each Fourier mode
+    % Lop_PT = 4*D2 + 2*riprime_invM.*D - m^2* full(sparse(1:Nc+1, 1:Nc+1, 1./riprime_square )); % Laplace operator matrix (checked)
+    Lop = 4*D2 + 2*diag(1./riprime)*D - m^2*diag(1./(riprime.^2));
+    
+    % first step: solve for the new surface charge and the new 2d
+    % electric potential
+    [psi2m_new,qm_new] = first_order_charge_update(psi2m_new,qm_new,qm_now,dt,...
+        Tq_vs_psi2,Lop,m,Nc,Jqphi_hat_now);
+    % second step: now solve for the new vorticity and fluid potential
+    [wm_new,phim_new] = first_order_vorticity_update(wm_new,phim_new,wm_now,D,...
+        BCs4dr_phi,wm1,wm3,phim1,phim3,Mi,Ra,Pr,dt,It,Lop,m,Nc,...
+        Jwphi_hat_now,Jpsi2q_hat_now);
+end
+        
