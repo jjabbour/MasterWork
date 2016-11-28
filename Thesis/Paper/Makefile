@@ -18,3 +18,4 @@ execute:
 	bibtex   master.aux
 	pdflatex master.tex
 	pdflatex master.tex
+	evince master.pdf
